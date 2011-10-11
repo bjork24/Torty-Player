@@ -4,7 +4,7 @@ Torty is an HTML 5 audio player that falls back to Flowplayer's flash player. He
 
 # Usage
 
-  <audio id="torty-player" preload controls src="http://www.archive.org/download/Cocaine/Cocaine.mp3"></audio>
+    <audio id="torty-player" preload controls src="http://www.archive.org/download/Cocaine/Cocaine.mp3"></audio>
 
 1. Include jQuery and tortyPlayer.js
 2. Add your HTML 5 audio tag:
