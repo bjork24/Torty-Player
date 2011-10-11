@@ -15,6 +15,31 @@ Add CSS for your audio player, and the flash fallback, which will have the same 
 Add some detection javascript:
 
     if($('audio').length) {
+        //   
+    }
+    
+Add some audio tag detection javascript:
+
+    var audioTag = document.createElement('audio');
+    if (!(!!(audioTag.canPlayType) && ("no" != audioTag.canPlayType("audio/mpeg")) && ("" != audioTag.canPlayType("audio/mpeg")))) {
+        //
+    }
+    
+Tell Torty Player which element to transform into the flash player
+
+    tortyPlayer($('#torty-player'),{
+        //
+    });
+    
+Specify location for the three flowplayer elements:
+
+    swfPlayer : 'flowplayer-3.2.7.swf',
+    swfControl : 'flowplayer.controls-3.2.5.swf',
+    swfAudio : 'flowplayer.audio-3.2.2.swf'
+    
+Once it's put together, it should look something like this:
+
+    if($('audio').length) {
         var audioTag = document.createElement('audio');
         if (!(!!(audioTag.canPlayType) && ("no" != audioTag.canPlayType("audio/mpeg")) && ("" != audioTag.canPlayType("audio/mpeg")))) {
             tortyPlayer($('#torty-player'),{
@@ -24,3 +49,5 @@ Add some detection javascript:
             });
         }    
     }
+    
+Enjoy the Torty!
